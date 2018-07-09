@@ -407,7 +407,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		}
 	}
 	
-	private boolean isUnlocked(int n)
+	public boolean isUnlocked(int n)
 	{
 		return unlockedLevels[n] == 1;
 	}
