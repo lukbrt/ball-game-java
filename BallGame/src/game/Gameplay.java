@@ -61,7 +61,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		
 		unlockedLevels = new int[4];
 		//fillProgress("res/unlocked.txt");
-	//TODO sprawdzam czy to działa!
+
 		fillProgress(ResourceLoader.load("unlocked.txt"));
 		
 //		for (int i = 0; i < unlockedLevels.length; i++)
@@ -296,7 +296,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		sliderPosition += SLIDER_SHIFT;
 	}
 	//TODO
-	public void fillProgress(InputStream input)
+	private void fillProgress(InputStream input)
 	{
 		//File file = new File(path);
 		int i = 0;
@@ -341,7 +341,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 //		}
 //	}
 	
-	public void updateProgressFile(String path)
+	private void updateProgressFile(String path)
 	{
 		StringBuffer sb = new StringBuffer("");
 		for (int i = 0; i < unlockedLevels.length; i++)
@@ -407,7 +407,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		}
 	}
 	
-	public boolean isUnlocked(int n)
+	private boolean isUnlocked(int n)
 	{
 		return unlockedLevels[n] == 1;
 	}
@@ -418,7 +418,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener
 		super.setPreferredSize(preferredSize);
 	}
 	
-	public void printCenteredText(Graphics2D g2d, Font font, String text, Color color)
+	private void printCenteredText(Graphics2D g2d, Font font, String text, Color color)
 	{
 		FontRenderContext context = g2d.getFontRenderContext();
         TextLayout txt = new TextLayout(text, font, context);

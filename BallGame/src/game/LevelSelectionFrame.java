@@ -38,7 +38,7 @@ public class LevelSelectionFrame extends JFrame
 		setVisible(true);
 	}
 	
-	public JButton createButton(String title, int lvl)
+	private JButton createButton(String title, int lvl)
 	{
 		JButton button = new JButton(title);
 		if (gameplay.isUnlocked(lvl))
